@@ -1,0 +1,11 @@
+name: postgres-db
+services:
+  db:
+    image: postgres
+    restart: always
+    volumes:
+    - ./postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=password
+    ports:
+      - 5444:5432
